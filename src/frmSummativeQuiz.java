@@ -310,7 +310,7 @@ public class frmSummativeQuiz extends javax.swing.JFrame {
                             .addGroup(pnlQuizLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(lblAmountCorrectResult, javax.swing.GroupLayout.DEFAULT_SIZE, 27, Short.MAX_VALUE)
                                 .addComponent(lblAmountIncorrectResult, javax.swing.GroupLayout.DEFAULT_SIZE, 27, Short.MAX_VALUE))
-                            .addComponent(lblPercentageResult, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(lblPercentageResult, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(pnlQuizLayout.createSequentialGroup()
                         .addGroup(pnlQuizLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
