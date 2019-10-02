@@ -2,9 +2,9 @@
 import javax.swing.JTextField;
 
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Michael Botros
+ * October 1st, 2019
+ * This program consists of 5 multiple choice questions where your score and percentage is given along with feedback
  */
 
 /**
@@ -29,6 +29,7 @@ public class frmSummativeQuiz extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        pnlScroll = new javax.swing.JScrollPane();
         pnlQuiz = new javax.swing.JPanel();
         lblQuizTitle = new javax.swing.JLabel();
         lblInstructions1 = new javax.swing.JLabel();
@@ -82,6 +83,8 @@ public class frmSummativeQuiz extends javax.swing.JFrame {
         lblFeedback1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        pnlScroll.setPreferredSize(new java.awt.Dimension(603, 600));
 
         pnlQuiz.setBackground(new java.awt.Color(255, 204, 204));
         pnlQuiz.setForeground(new java.awt.Color(255, 51, 51));
@@ -293,18 +296,6 @@ public class frmSummativeQuiz extends javax.swing.JFrame {
         pnlQuizLayout.setHorizontalGroup(
             pnlQuizLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlQuizLayout.createSequentialGroup()
-                .addGroup(pnlQuizLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnlQuizLayout.createSequentialGroup()
-                        .addGap(157, 157, 157)
-                        .addComponent(lblQuizTitle))
-                    .addGroup(pnlQuizLayout.createSequentialGroup()
-                        .addGap(42, 42, 42)
-                        .addComponent(lblInstructions1, javax.swing.GroupLayout.PREFERRED_SIZE, 540, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(pnlQuizLayout.createSequentialGroup()
-                        .addGap(148, 148, 148)
-                        .addComponent(lblInstructions2, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(pnlQuizLayout.createSequentialGroup()
                 .addGap(21, 21, 21)
                 .addGroup(pnlQuizLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(pnlQuizLayout.createSequentialGroup()
@@ -315,9 +306,10 @@ public class frmSummativeQuiz extends javax.swing.JFrame {
                             .addComponent(lblPercentage))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(pnlQuizLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblAmountCorrectResult, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblAmountIncorrectResult, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblPercentageResult, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(pnlQuizLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(lblAmountCorrectResult, javax.swing.GroupLayout.DEFAULT_SIZE, 27, Short.MAX_VALUE)
+                                .addComponent(lblAmountIncorrectResult, javax.swing.GroupLayout.DEFAULT_SIZE, 27, Short.MAX_VALUE))
+                            .addComponent(lblPercentageResult, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(pnlQuizLayout.createSequentialGroup()
                         .addGroup(pnlQuizLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -376,29 +368,42 @@ public class frmSummativeQuiz extends javax.swing.JFrame {
                             .addGroup(pnlQuizLayout.createSequentialGroup()
                                 .addGroup(pnlQuizLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(pnlQuizLayout.createSequentialGroup()
-                                        .addGap(65, 65, 65)
-                                        .addComponent(lblFeedback2, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(pnlQuizLayout.createSequentialGroup()
                                         .addGap(61, 61, 61)
                                         .addComponent(lblFeedback3, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(pnlQuizLayout.createSequentialGroup()
+                                        .addGap(65, 65, 65)
+                                        .addComponent(lblFeedback2, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(pnlQuizLayout.createSequentialGroup()
                                         .addGap(50, 50, 50)
                                         .addComponent(lblFeedback5, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(pnlQuizLayout.createSequentialGroup()
                                         .addGap(69, 69, 69)
                                         .addComponent(lblFeedback1, javax.swing.GroupLayout.PREFERRED_SIZE, 307, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(0, 0, Short.MAX_VALUE))))))
+                                .addContainerGap(140, Short.MAX_VALUE))))))
+            .addGroup(pnlQuizLayout.createSequentialGroup()
+                .addGap(96, 96, 96)
+                .addComponent(lblInstructions2, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(pnlQuizLayout.createSequentialGroup()
+                .addGroup(pnlQuizLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlQuizLayout.createSequentialGroup()
+                        .addGap(41, 41, 41)
+                        .addComponent(lblInstructions1, javax.swing.GroupLayout.PREFERRED_SIZE, 548, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(pnlQuizLayout.createSequentialGroup()
+                        .addGap(191, 191, 191)
+                        .addComponent(lblQuizTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         pnlQuizLayout.setVerticalGroup(
             pnlQuizLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlQuizLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(43, 43, 43)
                 .addComponent(lblQuizTitle)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(31, 31, 31)
                 .addComponent(lblInstructions1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(lblInstructions2, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(36, 36, 36)
+                .addGap(31, 31, 31)
                 .addComponent(lblQuestion1, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(lblOption1, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -492,79 +497,104 @@ public class frmSummativeQuiz extends javax.swing.JFrame {
                 .addGroup(pnlQuizLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblPercentage, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblPercentageResult, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(28, Short.MAX_VALUE))
+                .addContainerGap(45, Short.MAX_VALUE))
         );
+
+        pnlScroll.setViewportView(pnlQuiz);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnlQuiz, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(pnlScroll, javax.swing.GroupLayout.DEFAULT_SIZE, 603, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnlQuiz, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(pnlScroll, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCalculateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalculateActionPerformed
+        
+        //declaring all variables
         int numberCorrect = 0;
         int numberIncorrect = 0;
         double percentage;
-        
-        JTextField answer1 = txtAnswer1;
-        JTextField answer2 = txtAnswer2;
-        JTextField answer3 = txtAnswer3;
-        JTextField answer4 = txtAnswer4;
-        JTextField answer5 = txtAnswer5;
-        
+       
+       //fetching user answers from text field
+        String answer1 = txtAnswer1.getText();
+        String answer2 = txtAnswer2.getText();
+        String answer3 = txtAnswer3.getText();
+        String answer4 = txtAnswer4.getText();
+        String answer5 = txtAnswer5.getText();
+
+        //creating a series of if statements that look for the desired answer and add to the incorrect if the requested values are not found
         if (answer1.equals ("B") || answer1.equals ("b")) 
         {
             numberCorrect = numberCorrect + 1;
+            lblFeedback1.setText("Congrats, you are cultured!");
         } else 
         {
             numberIncorrect = numberIncorrect + 1;
+            lblFeedback1.setText("Why don't you look it up?");
         }
         
         if (answer2.equals ("C") || answer2.equals ("c")) 
         {
             numberCorrect = numberCorrect + 1;
+            lblFeedback2.setText("Must have been a lucky guess");
         } else 
         {
             numberIncorrect = numberIncorrect + 1;
+            lblFeedback2.setText("Yeah you shouldn't have got this one");
         }
         
         if (answer3.equals ("D") || answer3.equals ("d")) 
         {
             numberCorrect = numberCorrect + 1;
+            lblFeedback3.setText("Not bad kid...");
         } else 
         {
             numberIncorrect = numberIncorrect + 1;
+            lblFeedback3.setText("Hmm, take a moment to think about it");
         }
         
         if (answer4.equals ("A") || answer4.equals ("a")) 
         {
             numberCorrect = numberCorrect + 1;
+            lblFeedback4.setText("congrats, you can do basic math");
         } else 
         {
             numberIncorrect = numberIncorrect + 1;
+            lblFeedback4.setText("And you messed up 1+1");
         }
         
         if (answer5.equals ("C") || answer5.equals ("c")) 
         {
             numberCorrect = numberCorrect + 1;
+            lblFeedback5.setText("Yes I know you loved this quiz!");
         } else 
         {
             numberIncorrect = numberIncorrect + 1;
+            lblFeedback5.setText("How did you get this one wrong?!");
         }
         
-        percentage = ((double)numberCorrect/(double)numberIncorrect) * 100;
+        //calculating percentage
+        percentage = ((double)numberCorrect/((double)numberIncorrect + (double)numberCorrect)) * 100;
         
+        //rounding the percentage to 1 decimal place
+        percentage = percentage*10;
+        percentage = Math.round(percentage);
+        percentage = percentage/10;
+        
+        //outputting all results to certain labels at the bottom of the panel
         lblAmountCorrectResult.setText(numberCorrect + ".");
         lblAmountIncorrectResult.setText(numberIncorrect + ".");
-        
+        lblPercentageResult.setText(percentage + "%.");
         
     }//GEN-LAST:event_btnCalculateActionPerformed
 
@@ -650,6 +680,7 @@ public class frmSummativeQuiz extends javax.swing.JFrame {
     private javax.swing.JLabel lblQuestion5;
     private javax.swing.JLabel lblQuizTitle;
     private javax.swing.JPanel pnlQuiz;
+    private javax.swing.JScrollPane pnlScroll;
     private javax.swing.JTextField txtAnswer1;
     private javax.swing.JTextField txtAnswer2;
     private javax.swing.JTextField txtAnswer3;
